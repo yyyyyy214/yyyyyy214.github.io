@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山羊の前端小窝</title>
+    <title>送给小苏的女神节礼物</title>
     <style>
         * {
             margin: 0;
@@ -25,8 +25,12 @@
             position: relative;
             height: 560px;
             /* 加上倒影 */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
             -webkit-box-reflect: below 1px linear-gradient(transparent, transparent,
-                    transparent, transparent, #0005);
+                    transparent, transparent, rgba(0, 0, 0, 0.735));
         }
 
         .cloud {
@@ -44,8 +48,8 @@
             line-height: 20px;
             color: #fff;
             text-shadow: 0 0 5px #fff,
-                0 0 15px #fff,
-                0 0 30px #fff;
+                0 0 10px #fff,
+                0 0 15px #fff;
             animation: rain 1s linear forwards;
         }
 
@@ -59,7 +63,7 @@
             }
 
             /* 让雨点落到最下面时回弹10px后变大一点三倍并使其透明度消失可以 
-            达到真实雨水落地后溅射消失的效果 */
+达到真实雨水落地后溅射消失的效果 */
             100% {
                 transform: translateY(220px) scale(1.3);
                 opacity: 0;
@@ -69,15 +73,13 @@
 </head>
 
 <body>
-
     <div class="shell">
         <div class="cloud"></div>
     </div>
 
     <script>
-
         function randomText() {
-            const text = '唱跳篮球';
+            const text = '喜欢小苏';
             const letter = text[Math.floor(Math.random() * text.length)];
             return letter;
         }
@@ -98,9 +100,7 @@
                 cloud.removeChild(e);
             }, 2000);
         }
-        setInterval(rain, 20); 
-
-
+        setInterval(rain, 20);
     </script>
 </body>
 
